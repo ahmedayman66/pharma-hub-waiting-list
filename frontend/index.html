@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Pharma Career Hub — أول منصة فرص للصيادلة في مصر</title>
+  <meta name="description" content="أول منصة متخصصة تجمع كل فرص الصيدلة في مصر — تدريبات، كورسات، وظائف، فرص عملية. سجل الآن واحصل على وصول مبكر." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <div class="nav-logo">
+        <div class="logo-icon"><i class="fas fa-capsules"></i></div>
+        <span>Pharma<span class="accent">Career</span>Hub</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#problem">المشكلة</a></li>
+        <li><a href="#solution">الحل</a></li>
+        <li><a href="#testimonials">آراء الطلاب</a></li>
+        <li><a href="#benefits">المميزات</a></li>
+      </ul>
+      <a href="#waitlist" class="nav-cta">سجل مجانًا <i class="fas fa-arrow-left"></i></a>
+      <button class="nav-hamburger" id="hamburger" aria-label="القائمة"><i class="fas fa-bars"></i></button>
+    </div>
+    <div class="nav-mobile" id="nav-mobile">
+      <a href="#problem">المشكلة</a>
+      <a href="#solution">الحل</a>
+      <a href="#testimonials">آراء الطلاب</a>
+      <a href="#benefits">المميزات</a>
+      <a href="#waitlist" class="mobile-cta">سجل مجانًا ←</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="waitlist">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-glow hero-glow-1"></div>
+    <div class="hero-glow hero-glow-2"></div>
+
+    <div class="container hero-container">
+      <!-- Left side -->
+      <div class="hero-left">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          <span>الإطلاق قريبًا · Early Access</span>
+        </div>
+
+        <h1 class="hero-title">
+          مسارك المهني<br>
+          <span class="gradient-text">كصيدلاني</span><br>
+          يبدأ من هنا
+        </h1>
+
+        <p class="hero-desc">منصة واحدة تجمع كل تدريبات، كورسات، وفرص عمل الصيدلة في مصر. وفر ساعات البحث اليومية وركز على تطوير نفسك.</p>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-number" id="liveCounter">0</div>
+            <div class="stat-label"><i class="fas fa-users"></i> مسجل</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <div class="stat-number" id="remainingSeats">500</div>
+            <div class="stat-label"><i class="fas fa-ticket-alt"></i> مقعد متبقي</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <div class="stat-number">27+</div>
+            <div class="stat-label"><i class="fas fa-university"></i> جامعة</div>
+          </div>
+        </div>
+
+        <div class="progress-wrapper">
+          <div class="progress-header">
+            <span id="progressText"><i class="fas fa-fire"></i> 0% من المقاعد اكتملت</span>
+            <span class="progress-seats">500 مقعد فقط</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+          </div>
+        </div>
+
+        <!-- Avatars / social proof -->
+        <div class="social-proof">
+          <div class="avatar-stack">
+            <div class="avatar" style="background:#3b82f6">م</div>
+            <div class="avatar" style="background:#14b8a6">س</div>
+            <div class="avatar" style="background:#8b5cf6">ن</div>
+            <div class="avatar" style="background:#f59e0b">أ</div>
+            <div class="avatar" style="background:#ef4444">ر</div>
+          </div>
+          <span class="proof-text">انضم إليهم وكن من أوائل 500 طالب</span>
+        </div>
+      </div>
+
+      <!-- Right side: form -->
+      <div class="hero-right">
+        <div class="form-card" id="formCard">
+          <div class="form-card-top">
+            <div class="form-tag"><i class="fas fa-lock"></i> وصول مبكر مجاني</div>
+            <h3 class="form-title">سجّل الآن</h3>
+            <p class="form-subtitle">كن من أوائل 500 طالب — مجاني بالكامل</p>
+          </div>
+
+          <form id="signupForm" novalidate>
+            <div class="form-field">
+              <label class="field-label" for="name">الاسم الكامل</label>
+              <div class="input-wrapper">
+                <i class="fas fa-user input-icon"></i>
+                <input type="text" id="name" autocomplete="name" placeholder="مثال: أحمد محمد علي" />
+              </div>
+              <span class="field-error" id="nameError"></span>
+            </div>
+
+            <div class="form-field">
+              <label class="field-label" for="whatsapp">رقم الواتساب</label>
+              <div class="input-wrapper">
+                <i class="fab fa-whatsapp input-icon"></i>
+                <input type="tel" id="whatsapp" autocomplete="tel" placeholder="01xxxxxxxxx" maxlength="11" inputmode="numeric" />
+              </div>
+              <span class="field-error" id="whatsappError"></span>
+            </div>
+
+            <div class="form-field">
+              <label class="field-label" for="email">الإيميل <span class="optional-tag">اختياري</span></label>
+              <div class="input-wrapper">
+                <i class="fas fa-envelope input-icon"></i>
+                <input type="email" id="email" autocomplete="email" placeholder="your@email.com" />
+              </div>
+              <span class="field-hint"><i class="fas fa-info-circle"></i> لو واتساب اتأخر، الإيميل يضمن وصول التحديثات</span>
+            </div>
+
+            <button type="submit" class="submit-btn" id="submitBtn">
+              <span class="btn-text"><i class="fas fa-pen-alt"></i> احجز مقعدك مجانًا</span>
+              <span class="btn-spinner"></span>
+            </button>
+
+            <p class="form-privacy"><i class="fas fa-shield-alt"></i> بياناتك آمنة ومش هتتشارك مع أي طرف تالت</p>
+          </form>
+        </div>
+
+        <!-- Success card -->
+        <div class="success-card" id="successCard">
+          <div class="success-icon-wrap">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <h3>تم التسجيل! <span id="successName"></span> 🎉</h3>
+          <p>إنت دلوقتي جزء من مجتمع الصيادلة اللي هيغير شكل المهنة في مصر.</p>
+          <div class="success-actions">
+            <button onclick="shareNow()" class="success-btn share-btn">
+              <i class="fas fa-share-alt"></i> شارك مع زملائك
+            </button>
+            <button onclick="addAnotherSignup()" class="success-btn add-btn">
+              <i class="fas fa-user-plus"></i> سجّل لصديق
+            </button>
+          </div>
+          <div class="success-note">
+            <i class="fas fa-whatsapp" style="color:#25d366"></i>
+            هنتواصل معاك على الواتساب فور ما المنصة تطلع
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM SECTION -->
+  <section class="section" id="problem">
+    <div class="container">
+      <div class="section-eyebrow"><i class="fas fa-exclamation-triangle"></i> المشكلة</div>
+      <h2 class="section-title">بتعرف الإحساس ده؟</h2>
+      <p class="section-sub">كل طالب صيدلة في مصر بيمر بنفس المعاناة يوميًا</p>
+
+      <div class="problem-grid">
+        <div class="problem-card">
+          <div class="problem-icon-wrap"><i class="fas fa-random"></i></div>
+          <h3>فرص مبعثرة في كل حتة</h3>
+          <p>فرصة على فيسبوك، تانية على واتساب، تالتة على تيليغرام — مفيش مكان واحد بيجمع كل حاجة.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon-wrap"><i class="fas fa-hourglass-half"></i></div>
+          <h3>ساعتين كل يوم ضايعة</h3>
+          <p>بتتصفح جروبات وبتدور على فرص بدل ما تذاكر أو تطور نفسك. ده وقت كان ممكن يتحول لـ skill حقيقي.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon-wrap"><i class="fas fa-exclamation-circle"></i></div>
+          <h3>معلومات غير موثوقة</h3>
+          <p>إعلانات قديمة، فرص وهمية، ومعلومات ناقصة — مفيش جهة بتتأكد من صحة أي حاجة قبل ما تتنشر.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon-wrap"><i class="fas fa-map-signs"></i></div>
+          <h3>مسار مهني غير واضح</h3>
+          <p>مش عارف تبدأ منين؟ Clinical, Industrial, Community؟ مفيش roadmap واضح لكل تخصص.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUTION SECTION -->
+  <section class="section section-alt" id="solution">
+    <div class="container">
+      <div class="solution-grid">
+        <div class="solution-text">
+          <div class="section-eyebrow"><i class="fas fa-lightbulb"></i> الحل</div>
+          <h2 class="section-title">منصة واحدة <span class="gradient-text">تحل كل ده</span></h2>
+          <p class="solution-desc">Pharma Career Hub بتجمع كل الفرص في مكان واحد — موثوق، منظم، ومجاني للطلاب.</p>
+          <ul class="solution-list">
+            <li>
+              <div class="check-icon"><i class="fas fa-check"></i></div>
+              <div><strong>تحديثات فورية</strong> — كل الفرص بتتحدث لحظة بلحظة</div>
+            </li>
+            <li>
+              <div class="check-icon"><i class="fas fa-check"></i></div>
+              <div><strong>كل حاجة متراجعة</strong> — مفيش فرص وهمية أو قديمة</div>
+            </li>
+            <li>
+              <div class="check-icon"><i class="fas fa-check"></i></div>
+              <div><strong>Roadmaps مخصصة</strong> — حسب تخصصك وسنتك الدراسية</div>
+            </li>
+            <li>
+              <div class="check-icon"><i class="fas fa-check"></i></div>
+              <div><strong>مجاني 100%</strong> — لأول 500 طالب مسجل</div>
+            </li>
+          </ul>
+          <a href="#waitlist" class="solution-cta">سجل وابدأ رحلتك <i class="fas fa-arrow-left"></i></a>
+        </div>
+
+        <div class="mockup-phone">
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="app-header">
+                <span class="app-logo-sm">💊 PCH</span>
+                <span class="app-badge-sm">Beta</span>
+              </div>
+              <div class="app-search">
+                <i class="fas fa-search"></i>
+                <span>ابحث عن فرصة...</span>
+              </div>
+              <div class="app-tabs-sm">
+                <span class="app-tab-sm active-tab">الكل</span>
+                <span class="app-tab-sm">تدريب</span>
+                <span class="app-tab-sm">كورسات</span>
+                <span class="app-tab-sm">وظائف</span>
+              </div>
+              <div class="app-cards">
+                <div class="app-card-item internship">
+                  <div class="card-type-badge">تدريب</div>
+                  <div class="card-title">برنامج صيفي — مستشفى قصر العيني</div>
+                  <div class="card-meta"><i class="fas fa-clock"></i> 2 أيام متبقية</div>
+                </div>
+                <div class="app-card-item course">
+                  <div class="card-type-badge">كورس</div>
+                  <div class="card-title">Clinical Pharmacy Basics</div>
+                  <div class="card-meta"><i class="fas fa-star"></i> 4.9 · د. أحمد رضا</div>
+                </div>
+                <div class="app-card-item job">
+                  <div class="card-type-badge">وظيفة</div>
+                  <div class="card-title">Medical Rep — Novartis مصر</div>
+                  <div class="card-meta"><i class="fas fa-map-marker-alt"></i> القاهرة · Full-time</div>
+                </div>
+                <div class="app-card-item internship">
+                  <div class="card-type-badge">تدريب</div>
+                  <div class="card-title">Industrial Training — GSK Egypt</div>
+                  <div class="card-meta"><i class="fas fa-clock"></i> 5 أيام متبقية</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section" id="testimonials">
+    <div class="container">
+      <div class="section-eyebrow"><i class="fas fa-quote-right"></i> آراء الطلاب</div>
+      <h2 class="section-title">بيقولوا إيه عن الفكرة؟</h2>
+      <p class="section-sub">آراء طلاب صيدلة شاركوا في مراحل الـ Validation الأولى</p>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p class="testimonial-text">"أنا بضيع ساعتين يوميًا في جروبات الواتساب بدور على فرص تدريب. لو فيه منصة بتجمع كل ده، كان هيوفرلي وقت مهم جداً."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background:#3b82f6">م</div>
+            <div>
+              <div class="author-name">منة الله أحمد</div>
+              <div class="author-info">طالبة سنة 3 · جامعة المنوفية </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card featured-testimonial">
+          <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p class="testimonial-text">"المشكلة الكبيرة إن الفرص بتعدي وأنا مش عارفها. كورسات بتبدأ وتخلص من غيري، وتدريبات بتقفل الـ Application قبل ما أعرف بيها."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background:#14b8a6">س</div>
+            <div>
+              <div class="author-name">سارة محمود</div>
+              <div class="author-info">خريجة صيدلة · 2024</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p class="testimonial-text">"مش عارف أبدأ مسيرتي المهنية منين. Clinical ولا Industrial؟ محتاج حد يوضحلي الـ roadmap بتاع كل تخصص."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background:#8b5cf6">ن</div>
+            <div>
+              <div class="author-name">نادر سعيد</div>
+              <div class="author-info">طالب سنة 3 · جامعة المنوفية الأهلية</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS SECTION -->
+  <section class="section section-alt" id="benefits">
+    <div class="container">
+      <div class="section-eyebrow"><i class="fas fa-gem"></i> المميزات</div>
+      <h2 class="section-title">ليه Pharma Career Hub؟</h2>
+      <p class="section-sub">كل حاجة محتاجها في مسارك المهني من أول يوم في الكلية</p>
+
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon-wrap blue"><i class="fas fa-bolt"></i></div>
+          <h3>وفّر وقتك</h3>
+          <p>كل الفرص في مكان واحد — مش محتاج تفتش في 10 جروبات كل يوم بدون نتيجة.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon-wrap teal"><i class="fas fa-shield-alt"></i></div>
+          <h3>فرص موثوقة</h3>
+          <p>كل فرصة بتتأكد قبل النشر — مفيش إعلانات وهمية أو منتهية الصلاحية.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon-wrap purple"><i class="fas fa-road"></i></div>
+          <h3>Roadmap واضح</h3>
+          <p>خطة مهنية مخصصة حسب تخصصك وسنتك الدراسية — تعرف تبدأ من فين.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon-wrap amber"><i class="fas fa-chalkboard-teacher"></i></div>
+          <h3>كورسات متخصصة</h3>
+          <p>كورسات من دكاترة صيدلة متخصصين ومعتمدين في مجالات مختلفة.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon-wrap green"><i class="fas fa-building"></i></div>
+          <h3>فرص B2B حصرية</h3>
+          <p>شركات أدوية كبرى بتنشر فرص تدريب حصرية للطلاب المسجلين على المنصة.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon-wrap red"><i class="fas fa-bell"></i></div>
+          <h3>إشعارات فورية</h3>
+          <p>هتعرف بأي فرصة جديدة قبل ما تعدي — مش بعد ما يقفل الـ Application.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-eyebrow"><i class="fas fa-question-circle"></i> الأسئلة الشائعة</div>
+      <h2 class="section-title">عندك سؤال؟</h2>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>امتى هتطلع المنصة؟</span>
+            <i class="fas fa-chevron-down faq-arrow"></i>
+          </button>
+          <div class="faq-answer">
+            <p>بنشتغل على الـ MVP دلوقتي. المتوقع إطلاق Beta لأول 500 مسجل في الربع الأول من 2026. المسجلين هياخدوا إشعار على الواتساب قبل أي حد.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>هل المنصة مجانية؟</span>
+            <i class="fas fa-chevron-down faq-arrow"></i>
+          </button>
+          <div class="faq-answer">
+            <p>أيوه، مجانية بالكامل لأول 500 طالب مسجل على الـ Waitlist. بعد الإطلاق هيكون في Plan مجانية وأخرى Premium بمميزات إضافية.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>من أي جامعات؟ في شروط معينة؟</span>
+            <i class="fas fa-chevron-down faq-arrow"></i>
+          </button>
+          <div class="faq-answer">
+            <p>المنصة مفتوحة لكل طلاب وخريجي الصيدلة من أي جامعة في مصر — حكومي أو خاص. مفيش شروط سوى إنك طالب أو خريج صيدلة.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>إيه اللي هعمله بعد التسجيل؟</span>
+            <i class="fas fa-chevron-down faq-arrow"></i>
+          </button>
+          <div class="faq-answer">
+            <p>مش هتحتاج تعمل حاجة — هنتواصل معاك على الواتساب لما المنصة تكون جاهزة. لو دخلت إيميل، هتاخد تحديثات بانتظام.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>بياناتي آمنة؟</span>
+            <i class="fas fa-chevron-down faq-arrow"></i>
+          </button>
+          <div class="faq-answer">
+            <p>أيوه 100%. بياناتك بتتخزن بشكل آمن ومش بتتشارك مع أي طرف تالت. هنتواصل معاك بس على الواتساب والإيميل اللي دخلتهم.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="cta-section">
+    <div class="cta-glow"></div>
+    <div class="container cta-inner">
+      <div class="cta-tag"><i class="fas fa-clock"></i> المقاعد محدودة</div>
+      <h2>جاهز تبدأ مسارك المهني؟</h2>
+      <p>انضم لـ <strong id="ctaCount">0</strong> طالب وخريج صيدلة سجلوا بالفعل</p>
+      <a href="#waitlist" class="cta-main-btn">
+        <i class="fas fa-pen-alt"></i>
+        احجز مقعدك مجانًا
+        <span class="btn-arrow">←</span>
+      </a>
+      <div class="cta-reassure"><i class="fas fa-lock"></i> مجاني · لا بطاقة ائتمان · لا سبام</div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-logo">
+        <i class="fas fa-capsules"></i>
+        Pharma Career Hub
+      </div>
+      <p class="footer-tagline">منصة فرص الصيدلة في مصر</p>
+      <p class="footer-copy">© 2026 جميع الحقوق محفوظة</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
